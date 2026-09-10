@@ -1,0 +1,348 @@
+{
+  "kind": "Conditional deterministic sensitivity envelopes, not verified eigensystem bounds",
+  "moment_budget_max_site_Euclidean": 1e-06,
+  "gap_budget_in_J_units": 1e-06,
+  "budget_selection": "Round stress-test budgets, not statistical or interval error estimates",
+  "assumptions": "Correct ground-state identification and the stated gap/moment budgets",
+  "minimum_sampled_Gamma": 0.3428197815899485,
+  "minimum_sampled_gap": 0.34032602016576874,
+  "maximum_R_B_change": 1.2752526605541714e-07,
+  "rows": [
+    {
+      "B": 0.0,
+      "Gamma_interval": [
+        0.39701834095639305,
+        0.397020340956393
+      ],
+      "gap_interval": [
+        1.070495475071618,
+        1.0704974750716179
+      ],
+      "p_min_interval": [
+        0.9899282391439548,
+        0.9899322391439547
+      ],
+      "R_B_interval": [
+        0.0320235661196833,
+        0.03202374142390665
+      ],
+      "R_B_baseline": 0.032023653771782366,
+      "same_charge_under_moment_budget": true
+    },
+    {
+      "B": 0.1,
+      "Gamma_interval": [
+        0.3951110247766423,
+        0.39511302477664223
+      ],
+      "gap_interval": [
+        1.019224318971408,
+        1.019226318971408
+      ],
+      "p_min_interval": [
+        0.9894724480435038,
+        0.9894764480435037
+      ],
+      "R_B_interval": [
+        0.03038481171176752,
+        0.03038498158015998
+      ],
+      "R_B_baseline": 0.03038489664594918,
+      "same_charge_under_moment_budget": true
+    },
+    {
+      "B": 0.2,
+      "Gamma_interval": [
+        0.39341454366716316,
+        0.3934165436671631
+      ],
+      "gap_interval": [
+        0.9677323891725261,
+        0.9677343891725262
+      ],
+      "p_min_interval": [
+        0.9889845087337749,
+        0.9889885087337748
+      ],
+      "R_B_interval": [
+        0.028760851725036236,
+        0.02876101609510035
+      ],
+      "R_B_baseline": 0.02876093391005173,
+      "same_charge_under_moment_budget": true
+    },
+    {
+      "B": 0.3,
+      "Gamma_interval": [
+        0.39196844385269314,
+        0.3919704438526931
+      ],
+      "gap_interval": [
+        0.9156063987136608,
+        0.9156083987136608
+      ],
+      "p_min_interval": [
+        0.9884564193410907,
+        0.9884604193410906
+      ],
+      "R_B_interval": [
+        0.0271398178578508,
+        0.027139976625373877
+      ],
+      "R_B_baseline": 0.027139897241593748,
+      "same_charge_under_moment_budget": true
+    },
+    {
+      "B": 0.4,
+      "Gamma_interval": [
+        0.39081265116875097,
+        0.3908146511687509
+      ],
+      "gap_interval": [
+        0.8624886885890152,
+        0.8624906885890152
+      ],
+      "p_min_interval": [
+        0.9878770923750944,
+        0.9878810923750942
+      ],
+      "R_B_interval": [
+        0.025511135197206183,
+        0.025511288223394185
+      ],
+      "R_B_baseline": 0.02551121171027951,
+      "same_charge_under_moment_budget": true
+    },
+    {
+      "B": 0.5,
+      "Gamma_interval": [
+        0.38998662488428104,
+        0.389988624884281
+      ],
+      "gap_interval": [
+        0.808135905312903,
+        0.8081379053129031
+      ],
+      "p_min_interval": [
+        0.9872315231676723,
+        0.9872355231676722
+      ],
+      "R_B_interval": [
+        0.023867112972515096,
+        0.023867260097832237
+      ],
+      "R_B_baseline": 0.023867186535150863,
+      "same_charge_under_moment_budget": true
+    },
+    {
+      "B": 0.6,
+      "Gamma_interval": [
+        0.3895286358771416,
+        0.38953063587714154
+      ],
+      "gap_interval": [
+        0.75248186521159,
+        0.75248386521159
+      ],
+      "p_min_interval": [
+        0.9864999537543022,
+        0.9865039537543021
+      ],
+      "R_B_interval": [
+        0.022204669904074853,
+        0.022204810969222725
+      ],
+      "R_B_baseline": 0.022204740436623793,
+      "same_charge_under_moment_budget": true
+    },
+    {
+      "B": 0.7,
+      "Gamma_interval": [
+        0.3894752439798646,
+        0.38947724397986455
+      ],
+      "gap_interval": [
+        0.6956966201771105,
+        0.6956986201771106
+      ],
+      "p_min_interval": [
+        0.9856571844659083,
+        0.9856611844659082
+      ],
+      "R_B_interval": [
+        0.020526992932908533,
+        0.020527127806416214
+      ],
+      "R_B_baseline": 0.02052706036963515,
+      "same_charge_under_moment_budget": true
+    },
+    {
+      "B": 0.8,
+      "Gamma_interval": [
+        0.38986101736051004,
+        0.38986301736051
+      ],
+      "gap_interval": [
+        0.6382327227026866,
+        0.6382347227026867
+      ],
+      "p_min_interval": [
+        0.984672304904721,
+        0.9846763049047209
+      ],
+      "R_B_interval": [
+        0.0188449027013754,
+        0.0188450313121815
+      ],
+      "R_B_baseline": 0.018844967006748984,
+      "same_charge_under_moment_budget": true
+    },
+    {
+      "B": 0.9,
+      "Gamma_interval": [
+        0.3907184901814976,
+        0.39072049018149757
+      ],
+      "gap_interval": [
+        0.5808504987104303,
+        0.5808524987104303
+      ],
+      "p_min_interval": [
+        0.9834293215194438,
+        0.9834333215194437
+      ],
+      "R_B_interval": [
+        0.01717771909605864,
+        0.017177841468471955
+      ],
+      "R_B_baseline": 0.0171777802822336,
+      "same_charge_under_moment_budget": true
+    },
+    {
+      "B": 1.0,
+      "Gamma_interval": [
+        0.3877763581805582,
+        0.38777835818055817
+      ],
+      "gap_interval": [
+        0.5246163057895475,
+        0.5246183057895476
+      ],
+      "p_min_interval": [
+        0.9819337093638536,
+        0.9819377093638535
+      ],
+      "R_B_interval": [
+        0.015430500841908014,
+        0.015430617014699237
+      ],
+      "R_B_baseline": 0.015430558928269632,
+      "same_charge_under_moment_budget": true
+    },
+    {
+      "B": 1.2,
+      "Gamma_interval": [
+        0.36743589977005925,
+        0.3674378997700592
+      ],
+      "gap_interval": [
+        0.42115656315108757,
+        0.4211585631510875
+      ],
+      "p_min_interval": [
+        0.9784484856973577,
+        0.9784524856973575
+      ],
+      "R_B_interval": [
+        0.011912271315625894,
+        0.011912375302318323
+      ],
+      "R_B_baseline": 0.011912323308933152,
+      "same_charge_under_moment_budget": true
+    },
+    {
+      "B": 1.4,
+      "Gamma_interval": [
+        0.34281878158994855,
+        0.3428207815899485
+      ],
+      "gap_interval": [
+        0.34032502016576877,
+        0.3403270201657687
+      ],
+      "p_min_interval": [
+        0.9738977019058459,
+        0.9739017019058458
+      ],
+      "R_B_interval": [
+        0.009145710999275875,
+        0.009145804480661114
+      ],
+      "R_B_baseline": 0.009145757739924912,
+      "same_charge_under_moment_budget": true
+    },
+    {
+      "B": 1.6,
+      "Gamma_interval": [
+        0.49999899999999514,
+        0.5
+      ],
+      "gap_interval": [
+        0.3526517285763095,
+        0.35265372857630944
+      ],
+      "p_min_interval": [
+        0.9999979999999903,
+        1.0
+      ],
+      "R_B_interval": [
+        0.012373728363989086,
+        0.012373815037765244
+      ],
+      "R_B_baseline": 0.012373779950045866,
+      "same_charge_under_moment_budget": true
+    },
+    {
+      "B": 1.8,
+      "Gamma_interval": [
+        0.49999899999999936,
+        0.5
+      ],
+      "gap_interval": [
+        1.236260188498972,
+        1.2362621884989717
+      ],
+      "p_min_interval": [
+        0.9999979999999987,
+        1.0
+      ],
+      "R_B_interval": [
+        0.04337749263687558,
+        0.04337762064908673
+      ],
+      "R_B_baseline": 0.0433775855613674,
+      "same_charge_under_moment_budget": true
+    },
+    {
+      "B": 2.0,
+      "Gamma_interval": [
+        0.49999899999999947,
+        0.5
+      ],
+      "gap_interval": [
+        1.9758512451655126,
+        1.9758532451655124
+      ],
+      "p_min_interval": [
+        0.9999979999999989,
+        1.0
+      ],
+      "R_B_interval": [
+        0.06932802142790977,
+        0.06932818404089518
+      ],
+      "R_B_baseline": 0.06932814895317582,
+      "same_charge_under_moment_budget": true
+    }
+  ]
+}

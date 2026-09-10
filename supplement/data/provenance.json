@@ -1,0 +1,20 @@
+{
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "date": "2026-09-10",
+  "original_data_date": "2026-09-09",
+  "units": "hbar = a = J = 1",
+  "D": 2.0,
+  "K": 0.0,
+  "model": "linear chiral Heisenberg Hamiltonian with prescribed +z polarized exterior",
+  "small_exact_audit": "integer and rational arithmetic; candidate diagonalization is not trusted",
+  "large_solver": "full Hilbert-space sparse eigsh; no interval ordering certificate for N=19",
+  "large_seed": "947 + field-grid index",
+  "large_tolerance": 2e-12,
+  "large_sensitivity_seed": "12031 + field-grid index",
+  "large_sensitivity_tolerance": 2e-13,
+  "large_sensitivity_eigenpairs": 6,
+  "spin": 0.5,
+  "general_spin_results": "analytical only; scripts specialize to spin 1/2"
+}

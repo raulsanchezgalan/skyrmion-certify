@@ -1,0 +1,47 @@
+{
+  "pauli_operator_frobenius_error": 0.0,
+  "local_moment_error": 1.1102230246251565e-16,
+  "meshes": [
+    {
+      "N": 7,
+      "V": 20,
+      "E": 54,
+      "F": 36,
+      "Euler": 2
+    },
+    {
+      "N": 19,
+      "V": 38,
+      "E": 108,
+      "F": 72,
+      "Euler": 2
+    }
+  ],
+  "clamped_primal_dual_error": 2.7755575615628914e-16,
+  "independent_large_starts": [
+    {
+      "B": 0.0,
+      "E0_difference": 2.4868995751603507e-14,
+      "gap_difference": 7.460698725481052e-14,
+      "max_residual": 2.410355472389754e-13
+    },
+    {
+      "B": 0.4,
+      "E0_difference": 1.7053025658242404e-13,
+      "gap_difference": 2.5934809855243657e-13,
+      "max_residual": 2.517562628442044e-12
+    },
+    {
+      "B": 1.4,
+      "E0_difference": 3.730349362740526e-13,
+      "gap_difference": 1.7053025658242404e-13,
+      "max_residual": 7.085227535431104e-12
+    },
+    {
+      "B": 2.0,
+      "E0_difference": 5.684341886080802e-14,
+      "gap_difference": 3.552713678800501e-14,
+      "max_residual": 7.355694893405106e-12
+    }
+  ]
+}
