@@ -110,7 +110,16 @@ frontend is additionally required to run the notebook, but not the scripts.
 
 ## Citing
 
-If you use this code or data, please cite the paper above. 
+If you use this code or data, please cite:
+
+> R. Sánchez Galán, "Code and computational supplement for 'Certified robustness
+> of quantum spin textures under magnetic-field perturbations'," Zenodo, 2026.
+> https://doi.org/10.5281/zenodo.22688715
+
+A citable, versioned snapshot of this repository is archived on Zenodo
+(DOI: [10.5281/zenodo.22688715](https://doi.org/10.5281/zenodo.22688715), always
+resolves to the latest version) and mirrored on
+[Software Heritage](https://archive.softwareheritage.org/).
 
 ## License
 
