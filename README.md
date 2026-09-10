@@ -4,8 +4,7 @@ Code and computational supplement for:
 
 > R. Sánchez Galán and R. Wieser, "Certified robustness of quantum spin textures
 > under magnetic-field perturbations" (2026).
-> Paper:
-> Data/code archive DOI: 
+ 
 
 This repository contains the exact-arithmetic verification code, numerical
 data, and figure-generation scripts underlying the paper. The paper derives an
@@ -83,7 +82,7 @@ enclosures.
 
 ## What is exact and what is not
 
-- **Seven-spin results** (Section 5.1â5.2 of the paper) are backed by exact
+- **Seven-spin results** (Section 5.1, 5.2 of the paper) are backed by exact
   integer and rational arithmetic: the spectral ordering, the topological
   degree, the geometric admissibility radius, and the resulting field
   certificate are all proved correct by `exact_audit.py` /
@@ -111,8 +110,7 @@ frontend is additionally required to run the notebook, but not the scripts.
 
 ## Citing
 
-If you use this code or data, please cite the paper above. A citable
-snapshot of this repository is also archived on Zenodo: .
+If you use this code or data, please cite the paper above. 
 
 ## License
 
