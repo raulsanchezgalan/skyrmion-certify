@@ -11,8 +11,9 @@ The transverse-field example has (hx, hy) = (0.2, 0.07) at the central site.
 
 - `quantum_skyrmion_revised.ipynb`: executable notebook with saved outputs.
 - `physical_model.py`: lattice, linear Hamiltonian, local moments and geometry.
-- `exact_audit.py`: exact integer/rational spectral, moment and degree verification.
-- `verify_saved.py`: rechecks the saved candidates without an eigensolve.
+- `exact_certificates.py`: exact integer/rational spectral, moment and degree certificates.
+- `replay_certificates.py`: independent exact replay of all fourteen stored certificates.
+- `check_saved_certificates.py`: rechecks the saved candidates without an eigensolve.
 - `run_analysis.py`: field scans, event localization and certificate construction.
 - `verify_numerics.py`: independent Pauli assembly, mesh and eigensolver checks.
 - `sensitivity_analysis.py`: field-refinement record, conditional error-budget
@@ -27,7 +28,7 @@ From this directory:
 
 ```bash
 python -m pip install -r requirements.txt
-python verify_saved.py
+python check_saved_certificates.py
 python sensitivity_analysis.py
 python make_figures.py
 ```
@@ -35,7 +36,7 @@ python make_figures.py
 The first command installs the tested scientific packages. IPython and a notebook
 frontend are additionally needed to run the notebook, but not the scripts.
 
-`verify_saved.py` loads the quantized eigenbases and checks integer/rational
+`check_saved_certificates.py` loads the quantized eigenbases and checks integer/rational
 inequalities. It verifies all 128 eigenvalue enclosures, moment separating vectors,
 exact signed-preimage degrees, the field-radius lower bound, and the uniform gap
 and polarization bounds on the charge-changing interval. Floating-point arithmetic
@@ -77,7 +78,7 @@ size-scaling law. The paper proves the latter under explicit uniformity assumpti
 `data/field_refinement.json` records the scan step 0.0005 J, the adjacent
 charge-change bracket [0.6480, 0.6485] J, the critical face (0,1,3), and a Brent
 solve of its determinant. The verified interval [0.6480, 0.6490] J has convenient
-rational endpoints and midpoint 0.6485 J. The midpoint audit controls the gap and
+rational endpoints and midpoint 0.6485 J. The midpoint certificate controls the gap and
 polarizations on both halves. The floating-point root is a localization, not an
 exact enclosure of the root.
 
@@ -120,7 +121,7 @@ Hamiltonian entries are bounded via rational coefficients and an integer-square-
 enclosure of sqrt(3), then quantized with scale 2^48. See Appendix A for the proof
 of the complete spectral enclosure.
 
-Only the seven-spin audit and the stated interval implications are verified by
+Only the seven-spin certificates and the stated interval implications are verified by
 exact arithmetic. The nineteen-spin spectral ordering is supported by standard
 floating-point eigensolver diagnostics and independent starts.
 

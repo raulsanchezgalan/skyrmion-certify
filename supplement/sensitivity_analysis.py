@@ -61,7 +61,7 @@ def field_bracket():
         'verified_interval': [.648, .649], 'verified_midpoint': .6485,
         'reason_for_wider_verified_interval':
             'Convenient rational endpoints on opposite sides of the obstruction; '
-            'the central audit controls gap and moments over both half intervals.',
+            'the central certificate controls gap and moments over both half intervals.',
         'interpretation': 'Root localization is floating point; existence is certified separately.'
     }
     write('field_refinement.json', answer)

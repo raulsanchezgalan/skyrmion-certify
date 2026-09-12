@@ -8,7 +8,7 @@
   "D": 2.0,
   "K": 0.0,
   "model": "linear chiral Heisenberg Hamiltonian with prescribed +z polarized exterior",
-  "small_exact_audit": "integer and rational arithmetic; candidate diagonalization is not trusted",
+  "small_exact_certificates": "integer and rational arithmetic; candidate diagonalization is not trusted",
   "large_solver": "full Hilbert-space sparse eigsh; no interval ordering certificate for N=19",
   "large_seed": "947 + field-grid index",
   "large_tolerance": 2e-12,

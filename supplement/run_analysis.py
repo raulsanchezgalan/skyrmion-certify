@@ -7,7 +7,7 @@ import numpy as np
 import scipy
 from scipy.optimize import brentq
 from physical_model import Hamiltonian,Flake,geometry,closest_hull,record
-from exact_audit import audit
+from exact_certificates import certify
 
 HERE=Path(__file__).resolve().parent
 DATA=HERE/'data'
@@ -54,12 +54,12 @@ def scan_small():
     dump('symmetric_crossing.json',{'B_crossing':Bc})
     return out
 
-def audits():
+def certificates():
     results=[]
     for B,hx,hy in [('0.2','0','0'),('0.648','0.2','0.07'),('0.6485','0.2','0.07'),('0.649','0.2','0.07')]:
-        result=audit(B=B,hx=hx,hy=hy,save_candidates=DATA/f'audit_B{B}_hx{hx}_hy{hy}.npz')
+        result=certify(B=B,hx=hx,hy=hy,save_candidates=DATA/f'cert_B{B}_hx{hx}_hy{hy}.npz')
         results.append(result)
-    dump('exact_audits.json',results)
+    dump('exact_certificates.json',results)
     mid=results[2]['exact_bounds'];dl=F(mid['gap_lower']);pl=F(mid['polarization_lower']);eps=F(7,4000)
     interval={'left':'0.648','right':'0.649','gap_lower':str(dl-2*eps),
               'polarization_lower':str(pl-2*eps/(dl-eps))}
@@ -88,7 +88,7 @@ def provenance():
         'date':datetime.now(timezone.utc).date().isoformat(),
         'original_data_date':'2026-09-09','units':'hbar = a = J = 1','D':2.,'K':0.,
         'model':'linear chiral Heisenberg Hamiltonian with prescribed +z polarized exterior',
-        'small_exact_audit':'integer and rational arithmetic; candidate diagonalization is not trusted',
+        'small_exact_certificates':'integer and rational arithmetic; candidate diagonalization is not trusted',
         'large_solver':'full Hilbert-space sparse eigsh; no interval ordering certificate for N=19',
         'large_seed':'947 + field-grid index','large_tolerance':2e-12,
         'large_sensitivity_seed':'12031 + field-grid index',
@@ -97,6 +97,6 @@ def provenance():
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('--large',action='store_true')
-    args=parser.parse_args();print(json.dumps(scan_small(),indent=2));audits()
+    args=parser.parse_args();print(json.dumps(scan_small(),indent=2));certificates()
     if args.large:scan_large()
     provenance()

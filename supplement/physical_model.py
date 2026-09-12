@@ -45,7 +45,12 @@ class Flake:
         self.mesh_sites=points(self.radius+1)
         idx={p:i for i,p in enumerate(self.mesh_sites)}
         faces=[]
-        for x,y in self.mesh_sites:
+        # A downward triangle can be inside the disk even when its anchor
+        # (x,y) is outside. Enumerate the enclosing coordinate box as well.
+        L=self.radius+1
+        anchors=self.mesh_sites+[(x,y) for x in range(-L,L+1)
+                                for y in range(-L,L+1) if (x,y) not in idx]
+        for x,y in anchors:
             for tri in [((x,y),(x+1,y),(x,y+1)),
                         ((x+1,y+1),(x,y+1),(x+1,y))]:
                 if all(p in idx for p in tri):faces.append(tuple(idx[p] for p in tri))
@@ -60,6 +65,13 @@ class Flake:
                 i,j=orientations[0]
                 faces.append((j,i,cap))
         self.faces=tuple(faces)
+        # A hexagonal disk of radius L has exactly 6*L**2 elementary
+        # triangles and 6*L boundary edges, hence 6*L*(L+1) faces after
+        # capping. Unlike the Euler characteristic, this inventory
+        # detects an omitted elementary triangle.
+        n_cap=sum(1 for t in self.faces if cap in t)
+        assert len(self.faces)-n_cap==6*L*L,'wrong elementary triangle count'
+        assert n_cap==6*L,'wrong cap face count'
         self.mesh_positions=np.vstack([np.array([xy(p) for p in self.mesh_sites]),[np.nan,np.nan]])
         self.weights=np.array([1.]*self.N+[0.]*(len(self.mesh_sites)+1-self.N))
 

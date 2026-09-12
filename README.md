@@ -22,8 +22,9 @@ larger nineteen-spin example provided as a floating-point illustration.
 figures/                  Vector (PDF) and raster (PNG) versions of the three paper figures
 supplement/
   physical_model.py       Lattice, linear Hamiltonian, local moments, and mesh geometry
-  exact_audit.py          Exact integer/rational spectral, moment, and degree verification
-  verify_saved.py         Rechecks the saved certificates without re-running an eigensolver
+  exact_certificates.py   Exact integer/rational spectral, moment, and degree certificates
+  replay_certificates.py  Independent exact replay of all fourteen stored certificates
+  check_saved_certificates.py         Rechecks the saved certificates without re-running an eigensolver
   run_analysis.py         Field scans, event localization, and certificate construction
   verify_numerics.py      Independent Pauli-matrix assembly and eigensolver cross-checks
   sensitivity_analysis.py Field-refinement record and conditional error-budget propagation
@@ -42,10 +43,10 @@ without re-running any eigensolver:
 ```bash
 cd supplement
 python -m pip install -r requirements.txt
-python verify_saved.py
+python check_saved_certificates.py
 ```
 
-`verify_saved.py` loads the quantized eigenbases saved in `data/` and checks,
+`check_saved_certificates.py` loads the quantized eigenbases saved in `data/` and checks,
 using exact integer and rational arithmetic, all 128 eigenvalue enclosures for
 the seven-spin Hamiltonian, the moment separating vectors, the exact
 signed-preimage topological degree, the field-radius lower bound, and the
@@ -85,8 +86,8 @@ enclosures.
 - **Seven-spin results** (Section 5.1, 5.2 of the paper) are backed by exact
   integer and rational arithmetic: the spectral ordering, the topological
   degree, the geometric admissibility radius, and the resulting field
-  certificate are all proved correct by `exact_audit.py` /
-  `verify_saved.py`, independent of floating-point rounding.
+  certificate are all proved correct by `exact_certificates.py` /
+  `check_saved_certificates.py`, independent of floating-point rounding.
 - **Nineteen-spin results** are conventional floating-point sparse
   diagonalization, checked by eigenpair residuals and independent random
   restarts, and are not accompanied by exact spectral-ordering enclosures.
